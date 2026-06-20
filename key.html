@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Key</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary shadow">
+<div class="container">
+<a class="navbar-brand fw-bold">🏨 Hotel Portal</a>
+<ul class="navbar-nav ms-auto flex-row">
+<li class="nav-item me-3"><a class="nav-link" href="checkin.html">Check-In</a></li>
+<li class="nav-item me-3"><a class="nav-link" href="room.html">My Room</a></li>
+<li class="nav-item me-3"><a class="nav-link" href="profile.html">Profile</a></li>
+<li class="nav-item"><a class="nav-link text-warning" href="#" onclick="logout()">🚪 Logout</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-5">
+<div class="card shadow-lg mt-5">
+<div class="card-body text-center p-5">
+<div class="display-1">🔑</div>
+<h2>Digital Room Key</h2>
+<hr>
+<h4 id="roomNo"></h4>
+<h5 id="guestName"></h5>
+<button onclick="unlockDoor()" class="btn btn-success mt-4">Unlock Door</button>
+<div id="unlockMsg" class="alert alert-success mt-4 d-none">Door Unlocked Successfully!</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

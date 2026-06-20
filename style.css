@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+/* Navbar */
+.navbar{
+  background-color: navy;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.nav-links{
+  position: absolute;
+  right: 30px;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.nav-links a:hover{
+  color: gold;
+}
+/* Main-Section */
+.main-section{
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f5f5f5;
+}
+.main-section h2{
+  font-size: 48px;
+  color: navy;
+  margin-bottom: 20px;
+}
+.main-section p{
+  font-size: 20px;
+  color: #444;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.main-section-buttons a{
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 18px;
+}
+.btn-primary{
+  background-color: navy;
+  color: white;
+}
+.btn-secondary{
+  background-color: gold;
+  color: black;
+}
+/* Features */
+.features{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+.feature-card{
+  background-color: white;
+  width: 300px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.feature-card h3{
+  color: navy;
+  margin-bottom: 15px;
+}
+/* Login & Signup */
+.form-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+}
+.form-box{
+  background-color: white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.form-box h2{
+  text-align: center;
+  margin-bottom: 30px;
+  color: navy;
+}
+.form-box input{
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.form-box button{
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: navy;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.form-box button:hover{
+  background-color: darkblue;
+}
+.form-box p{
+  margin-top: 20px;
+  text-align: center;
+}
+.form-box a{
+  color: navy;
+  text-decoration: none;
+  font-weight: bold;
+}

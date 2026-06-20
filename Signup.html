@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Create Account</h2>
+      <form id="signupForm">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Enter Email" required>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    let name = document.getElementById("fullName").value;
+    let email = document.getElementById("signupEmail").value;
+    let phone = document.getElementById("signupPhone").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if(password !== confirmPassword) {
+      alert("❌ Passwords do not match!");
+      return;
+    }
+    
+    if(password.length < 4) {
+      alert("❌ Password must be at least 4 characters!");
+      return;
+    }
+    
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let userExists = users.find(u => u.email === email);
+    
+    if(userExists) {
+      alert("❌ Email already registered! Please login.");
+      return;
+    }
+    
+    let newUser = {
+      name: name,
+      email: email,
+      phone: phone,
+      password: password
+    };
+    
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+    
+    alert("✅ Signup Successful! Please login.");
+    window.location.href = "login.html";
+  });
+  </script>
+</body>
+</html>
